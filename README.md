@@ -38,3 +38,47 @@ Follow these steps to set up and run the project:
 git clone https://github.com/sivasai3949/skillnaav-fullstack.git
 cd skillnaav
 ```
+
+### 2. Environment Setup
+
+In the root of the project, create a `.env` file with the following contents:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+NODE_ENV=development
+```
+
+### 3. Running the Frontend
+
+Navigate to the frontend directory and install the necessary dependencies:
+
+```
+cd frontend
+npm install
+
+To start the frontend development server:
+npm start
+
+```
+
+By default, the frontend will run on http://localhost:3000.
+
+### 4. Running the Backend
+
+Navigate to the backend directory and install the required packages:
+
+``
+cd backend
+npm install
+
+[Do not forget to add .env before starting the backend server]
+
+To start the backend server:
+npm start
+
+```
+
+```
+
+By default, the backend will run on http://localhost:5000.
