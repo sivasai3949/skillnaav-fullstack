@@ -64,21 +64,17 @@ npm start
 
 By default, the frontend will run on http://localhost:3000.
 
-### 4. Running the Backend
+### 3. Running the Backend
 
-Navigate to the backend directory and install the required packages:
+Navigate to the backend directory and install the necessary dependencies:
 
-``
+```
 cd backend
 npm install
 
-[Do not forget to add .env before starting the backend server]
-
-To start the backend server:
+To start the backend development server:
 npm start
 
 ```
 
-```
-
-By default, the backend will run on http://localhost:5000.
+By default, the frontend will run on http://localhost:5000.
