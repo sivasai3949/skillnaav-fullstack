@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add remote server to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H www.skillnaav.com >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts  # Optional: Check that the key was added
+
+      - name: Deploy to server
+        run: |
+          # SSH into the server and run the deploy.sh script from the server itself
+          ssh ubuntu@www.skillnaav.com 'bash /home/ubuntu/skillnaav-fullstack/deploy.sh'
