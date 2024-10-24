@@ -72,6 +72,7 @@ Navigate to the backend directory and install the necessary dependencies:
 cd backend
 npm install
 
+[Dont forget to add .env and init MongoUrl needs to be setup for the Backend DB interaction]
 To start the backend development server:
 npm start
 
